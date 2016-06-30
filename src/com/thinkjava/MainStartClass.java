@@ -1,6 +1,7 @@
 package com.thinkjava;
 
 import com.thinkjava.chart2.StaticTest;
+import com.thinkjava.chart3.Letter;
 import com.thinkjava.chart3.Tank;
 
 public class MainStartClass {
@@ -38,15 +39,36 @@ public class MainStartClass {
 		//		而对象赋值是将“引用”从一个地方复制到 另一个地方。
 		
 		//(以下现象为别名机制)
-		Tank t1=new Tank();
-		Tank t2=new Tank();
-		t1.level=9;
-		t2.level=47;
-		System.out.println("t1.level:"+t1.level+"   t2.level:"+t2.level);
-		t1=t2;
-		System.out.println("t1.level:"+t1.level+"   t2.level:"+t2.level);
-		t1.level=27;
-		System.out.println("t1.level:"+t1.level+"   t2.level:"+t2.level);
+//		Tank t1=new Tank();
+//		Tank t2=new Tank();
+//		t1.level=9;
+//		t2.level=47;
+//		System.out.println("t1.level:"+t1.level+"   t2.level:"+t2.level);
+//		t1=t2;
+//		System.out.println("t1.level:"+t1.level+"   t2.level:"+t2.level);
+//		t1.level=27;
+//		System.out.println("t1.level:"+t1.level+"   t2.level:"+t2.level);
+		
+		//3.6 自动递增和递减   ++a、--a先执行运算，再生成值； a++、a--先生成值，再执行运算。
+//		int i=1;
+//		System.out.println("i: "+i);
+//		System.out.println("i: "+ ++i);
+//		System.out.println("i: "+ i++);
+//		
+//		System.out.println("i: "+i);
+//		System.out.println("i: "+ --i);
+//		System.out.println("i: "+ i--);
+		
+		//3.7.1测试对象的对等性,
+//		Integer n1=new Integer(47);
+//		Integer n2=new Integer(47);
+//		System.out.println(n1==n2);
+//		System.out.println(n1!=n2);
+//		System.out.println(n1.equals(n2));
+		
+		//3.8 逻辑操作符   编写一个程序模拟抛硬币的结果？？？？
+		//3.8.1 短路  && ||   前面的表达式不满足则后面的表达式不在继续，以提高性能
 		
 	}
+	
 }
