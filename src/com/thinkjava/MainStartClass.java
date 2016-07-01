@@ -3,6 +3,9 @@ package com.thinkjava;
 import com.thinkjava.chart2.StaticTest;
 import com.thinkjava.chart3.Letter;
 import com.thinkjava.chart3.Tank;
+import com.thinkjava.chart5.Cupboard;
+import com.thinkjava.chart5.House;
+import com.thinkjava.chart5.Table;
 
 public class MainStartClass {
 
@@ -69,6 +72,46 @@ public class MainStartClass {
 		//3.8 逻辑操作符   编写一个程序模拟抛硬币的结果？？？？
 		//3.8.1 短路  && ||   前面的表达式不满足则后面的表达式不在继续，以提高性能
 		
+		/**
+		 * 第4章  流程控制    (if else,whiel,do while,for,return,break,java不支持goto)
+		 */
+		/**
+		 * 第5章 初始化与清理
+		 */
+		//5.1 构造器初始化  
+		//		一个类包含未初始化的string引用，java会将其初始化成null。
+		//5.3 默认构造器
+		//		如果没有构造器，java会自动创建，如果已近定义了构造器，编译器则不会帮你建构造器,如果你再调用程序会出错!
+		//5.7 构造器初始化   代码如下：
+//		public class Counter{
+//			int i;
+//			Counter(){i=7;}
+//		}
+		//i首先会被置为0，然后变成7；
+		//5.7.1 初始化顺序  变量定义的顺序觉得初始化顺序，即使变量定义散布于方法定义之间，他们仍旧会在任何方法调用前初始化。
+//		House h=new House();
+//		h.f();
+		//5.7.2 静态数据的初始化  无论创建多少个对象，静态数据只占用一份存储区域。
+		//一下案例已think java的例子为准
+//		static Table table=new Table();
+//		static Cupboard cupboard=new Cupboard();
+//		System.out.println("creating new cupboard() in main");
+//		new Cupboard();
+		//		初始化顺序是先静态（如果它尚未初始化），然后是非静态 
+		
+		//5.8  数组初始化??????????(有时间再看 )
+		
+		//5.9  枚举类型，它有一个有用的地方是可以在switch语句中使用
+		
+		/**
+		 * 第6章  访问权限控制
+		 */
+		
+		/**
+		 * 第7章 复用类
+		 */
+		//7.1  组合语法   
+		//		编译器并不是简单的为每一个引用都创建默认对象，提高效率。
 	}
 	
 }
