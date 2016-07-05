@@ -1,5 +1,11 @@
 package com.thinkjava;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
+import com.thinkjava.chart10.Contents;
+import com.thinkjava.chart10.Destination;
+import com.thinkjava.chart10.Paral4;
 import com.thinkjava.chart2.StaticTest;
 import com.thinkjava.chart3.Letter;
 import com.thinkjava.chart3.Tank;
@@ -153,7 +159,72 @@ public class MainStartClass {
 		//			当外部类创建一个内部类时，此内部类会秘密捕获一个指向那个外部类的应用，然后就可以访问外部类成员了，
 		//			但是内部类的成员只能在与其外围类的对象相关联的情况下才能被创建。构建内部类对象时，需要一个指向
 		//			其外围类对象的应用，如果编译器访问不到这个引用就会报错。
+		//10.3 使用.this与.new  如果想生成外部类对象的引用，可在外部类名字后面加.this,这样产生的引用自动地具有正确的
+		//			类型，并在编译期就检测，没有运行时的开销。
+		//			而如果想创建内部类对象时 用”外部类对象.new 内部类“,但如果你创建的是静态内部类你就不用外部类的对象。
+		//10.4 内部类与向上转型
+//		Paral4 p=new Paral4();
+//		Contents contents = p.contents();
+//		Destination destination = p.destination("haha");
+//		int value = contents.value();
+//		String readLable = destination.readLable();
+//		System.out.println("contents:"+value+"    destination:"+readLable);
+		//不可用p.new PContents();，因为Pcontents类是private权限
 		
+		//10.6 匿名内部类（有时间再看）
+		//10.7 嵌套类
+		//		要创建嵌套类的对象，并不需要其外部类的对象。
+		//		不能从嵌套类的对象访问非静态的外围对象。
+		//		嵌套类与普通内部类还有一个区别，不同内部类的字段与方法，只能放在类的外部层次上，所有普通的内部类不能有
+		//		static数据和static字段，也不能包含嵌套类，但是嵌套类可以包含所有这些东西。	
+		//10.8 为什么需要内部类？最主要的原因是：每个内部类都能独立地继承自一个（接口的）实现，所以无论外部类是否已经
+		//			继承了实现，对于内部类都没有影响。
+		
+		/**
+		 * 第11章 持有对象
+		 */
+		//数组是保存一组对象的最有效的方式，如果保存一组基本类型数据，推荐使用这种方法。但是数组有固定尺寸
+		//java提供了基本类型是List、Set、Queue和Map的容器
+		//11.2 基本概念
+		//		java容器类的用途是保存对象，并将其划分为两个不同的概念
+		//		1）Collection。一个独立元素的序列,List必须是顺序存储，Set不能重复，Queue按照排队规则来确定对象产生的顺序。
+		//		2）Map。一组成对的“键值对”
+		//11.8 Stack 通常指先进后出的容器
+		//		LinkedList具有能够直接实现栈的所有功能和方法。因此可直接将LinkedList作为栈使用。
+		//11.11 Queue,队列是先进先出的容器。LinkedList提供了支持的方法，并且它实现了Queue接口。
+		
+//		Queue<Character> queue=new LinkedList<Character>();
+//		for (char c:"brontosaurus".toCharArray()) {
+//			queue.offer(c);
+//		}
+//		while(queue.peek()!=null){
+//			System.out.println(queue.remove()+"");
+//		}
+		/**
+		 * 第12章 通过异常处理错误
+		 */
+		//12.6 捕获所有的异常（以后有时间仔细的看）
+		//12.7 java标准异常
+		//		RuntimeException是一个特例，对于这种异常类型，编译器不需要异常说明，其输出给System.err
+		//		如果RuntimeException没有捕获而直达main（）函数，那么程序退出前将调用异常的pirntStackTrace（）方法
+//		throw new RuntimeException("from main");
+		//		在代码中只能忽略RuntimeException类型的的异常，其他类型的异常的处理都是由编译器强制实施的。
+		//12.8 使用finally进行清理
+//		System.out.println("entery first block");
+//		try{
+//			System.out.println("entery second block");
+//			try{
+//				throw new Exception();
+//			}finally{
+//				System.out.println("finally in 2st try block!");
+//			}
+//		}catch(Exception e){
+//			System.out.println("catch in 1st try block");
+//		}finally{
+//			System.out.println("finally in 1st try block!");
+//		}
+		//12.8.1 在return中使用finally，在finally内部从何处返回无关紧要。
+		//12.8.3 异常丢失 （例子看269页例子）
 	}
 	
 }
