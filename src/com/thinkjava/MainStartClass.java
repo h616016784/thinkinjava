@@ -271,6 +271,25 @@ public class MainStartClass {
 		//		这个例子中，RTTI转换的并不彻底，object转换成Shape，这是因为我们只知道List<Shape>保存的是Shape。在编译时
 		//		由容器和java的泛型系统来强制确保这一点；而在运行时，有类型转换操作来确保这一点。
 		//14.2 Class对象
+		//		Class对象包含了与类有关的信息。Class对象就是用来创建类的所有“常规”对象的,每个类都有一个Class对象，换言之
+		//		每当	编写并编译一个类，就会创建一个Class对象（被保存在同名的.class文件中），
+		//		类加载的过程（如果忘记可查看书上内容）。
+		//14.2.1 类字面常量  
+		//		当使用.class来创建对Class对象的引用时，不会自动的初始化该Class对象。（仔细研究319页例子）
+		//		如果一个static final值是“编译期常量”，那么这个值不需要对类进行初始化就可以读取，相反则不行。
+		//14.2.2 泛化的Class引用
+//		Class intClass=int.class;
+//		Class<Integer> genericIntClass=int.class;
+//		genericIntClass=Integer.class;//same thing
+//		intClass=double.class;
+//		//genericIntClass=double.class;//illegal
+		
+		//14.3 类型转换前先做检查（第14章剩下的内容要仔细看看!!!!!!!!）
+		
+		/**
+		 * 第15章 泛型
+		 */
+		//15.2 简单泛型
 	}
 	
 }
