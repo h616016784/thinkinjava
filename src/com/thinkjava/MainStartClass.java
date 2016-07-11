@@ -12,11 +12,6 @@ import java.util.Random;
 import com.thinkjava.chart10.Contents;
 import com.thinkjava.chart10.Destination;
 import com.thinkjava.chart10.Paral4;
-import com.thinkjava.chart15.Fnorkle;
-import com.thinkjava.chart15.Frob;
-import com.thinkjava.chart15.Particle;
-import com.thinkjava.chart15.Quark;
-import com.thinkjava.chart15.RandomList;
 import com.thinkjava.chart2.StaticTest;
 import com.thinkjava.chart3.Letter;
 import com.thinkjava.chart3.Tank;
@@ -234,7 +229,7 @@ public class MainStartClass {
 //		}finally{
 //			System.out.println("finally in 1st try block!");
 //		}
-		//12.8.1 在return中使用finally，在finally内部从何处返回无关紧要。
+		//12.8.2 在return中使用finally，在finally内部从何处返回无关紧要。
 		//12.8.3 异常丢失 （例子看269页例子）
 		//12.9 异常的限制
 		//		当覆盖方法的时候，只能抛出在基类方法的异常说明里列出的异常。（480页的例子经典，要看 ）
@@ -249,9 +244,9 @@ public class MainStartClass {
 		 */
 		//		字符串操作是计算机程序设计中最常见的行为
 		//13.1 不可变String
-		//		String对象时不可变的，在JDK中似乎每一个都能修改String的值，实际上都是创建了一个全新的String对象，以包含
+		//		String对象是不可变的，在JDK中似乎每一个都能修改String的值，实际上都是创建了一个全新的String对象，以包含
 		//		修改后的字符串内容。而最初的String对象则丝毫未动。
-		//		没当把String对象作为方法的参数时，都会复制一份引用，而该引用所指的对象其实一直待在单一的物理位置上，从未动过
+		//		每当把String对象作为方法的参数时，都会复制一份引用，而该引用所指的对象其实一直待在单一的物理位置上，从未动过
 //		String s="howday";
 //		System.out.println(s);
 //		String ss=s.toUpperCase();//应该是局部方法的内容，这个做了一点改动
@@ -262,7 +257,7 @@ public class MainStartClass {
 //		String mango="mango";
 //		String s="abc"+mango+"def"+47;
 //		System.out.println(s);
-		//以上例子编译器创建了一个StringBuilder对象，用以构造最终的String，并未每个字符串调用一次StringBuilder的append方法。
+		//以上例子编译器创建了一个StringBuilder对象，用以构造最终的String，并为每个字符串调用一次StringBuilder的append方法。
 		//最后调用toString方法生成成果，并存为s。（因为StringBuilder更高效）
 		//		StringBuilder是jdk1.5以后有的，是线程不安全的但效率高，StringBuffer是线程安全但效率低。
 		//13.3 无意识的递归  (看287页例子体会含义)
