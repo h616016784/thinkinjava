@@ -1,11 +1,22 @@
 package com.thinkjava;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.Queue;
+import java.util.Random;
 
 import com.thinkjava.chart10.Contents;
 import com.thinkjava.chart10.Destination;
 import com.thinkjava.chart10.Paral4;
+import com.thinkjava.chart15.Fnorkle;
+import com.thinkjava.chart15.Frob;
+import com.thinkjava.chart15.Particle;
+import com.thinkjava.chart15.Quark;
+import com.thinkjava.chart15.RandomList;
 import com.thinkjava.chart2.StaticTest;
 import com.thinkjava.chart3.Letter;
 import com.thinkjava.chart3.Tank;
@@ -292,6 +303,35 @@ public class MainStartClass {
 		//15.2 简单泛型
 		//15.2.1 一个元祖类库    仅一次方法调用就能返回多个对象。
 		//		元祖是指将一组对象直接打包存储于其中的一个单一对象。
+		//15.2.3 RandomList
+//		RandomList<String> rs=new RandomList<String>();
+//		for(String s:("The quick brown fox jumped over "+"the lazy brown dog").split(" ")){
+//			rs.add(s);
+//		}
+//		for(int i=0;i<11;i++)
+//			System.out.println(rs.select()+" ");
+		//15.3 泛型接口
+		//15.4 泛型方法  基本指导原则：只要你能做到，尽量使用泛型方法。另外，对于一个static的方法而言
+		//		无法访问泛型类的类型参数，所以如果static方法需要使用泛型能力，就不许使用泛型方法。
+		//		(以后的内容有时间再仔细的看看)
+		//15.7 擦除的神秘之处
+//		Class c1 = new ArrayList<Integer>().getClass();
+//		Class c2 = new ArrayList<String>().getClass();
+//		System.out.println(c1==c2);
+		
+//		List<Frob> list=new ArrayList<Frob>();
+//		Map<Frob, Fnorkle> map=new HashMap<Frob, Fnorkle>();
+//		Quark<Fnorkle> quark=new Quark<Fnorkle>();
+//		Particle<Long, Double> p=new Particle<Long, Double>();
+//		
+//		System.out.println(Arrays.toString(list.getClass().getTypeParameters()));
+//		System.out.println(Arrays.toString(map.getClass().getTypeParameters()));
+//		System.out.println(Arrays.toString(quark.getClass().getTypeParameters()));
+//		System.out.println(Arrays.toString(p.getClass().getTypeParameters()));
+		
+		//		在泛型代码内部，无法获得任何有关泛型参数类型的信息。
+		//		java泛型是使用擦除来实现的，这意味着当你使用泛型时，任何具体的类型信息都将被擦除，唯一知道的就是在使用一个对象。
+		//		因此List<String>和 list<Integer>在运行时事实上是相同的类型，这两种形式都被擦除成他们的“原生”类型,即List。
 	}
 	
 }
