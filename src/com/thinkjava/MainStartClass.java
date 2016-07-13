@@ -10,13 +10,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Random;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import com.thinkjava.chart10.Contents;
 import com.thinkjava.chart10.Destination;
 import com.thinkjava.chart10.Paral4;
 import com.thinkjava.chart2.StaticTest;
-import com.thinkjava.chart20.PasswordUtils;
-import com.thinkjava.chart20.UseCaseTracker;
+import com.thinkjava.chart21.LiftOff;
+//import com.thinkjava.chart20.PasswordUtils;
+//import com.thinkjava.chart20.UseCaseTracker;
 import com.thinkjava.chart3.Letter;
 import com.thinkjava.chart3.Tank;
 import com.thinkjava.chart5.Cupboard;
@@ -428,7 +432,21 @@ public class MainStartClass {
 		//		1、定义任务。线程可以驱动任务，描述任务可有Runnable接口来提供。但Runnable接口的run方法并无特殊之处，
 		//					不会产生线程能力，要实现线程行为，必须显示将一个任务附着到线程上。
 		//		2、Thread类 
-						
+		//		3、使用Executor
+		//					java.util.concurrent包中的执行器（Executor）管理Thread对象。
+//		ExecutorService exec = Executors.newCachedThreadPool();
+//		for(int i=0;i<5;i++)
+//			exec.execute(new LiftOff());
+//		exec.shutdown();
+		//					首先考虑CachdThreadPool，而不是FixedThreadPool，因为前者在程序的执行过程中创建与所需量相同的线程，
+		//					然后再它回收就线程时停止创建新线程，因此它是合理的选择，只有这种方式引发问题时才用后者。
+		//					singleThreadPool（使用例子看657页说明），如果一次提交多个任务会排队。
+		//		4、从任务中产生返回值
+		//				Runnable是执行工作的独立任务，但是它不返回值。要想返回值可以实现Callable接口。并且必须用ExecutorService.submit()方法调用它。
+		//		5、休眠
+		//		6、优先级
+		//		7、让步
+		//		8、后台线程
 	}
 	
 }
