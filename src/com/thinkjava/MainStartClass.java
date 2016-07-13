@@ -2,6 +2,8 @@ package com.thinkjava;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -13,6 +15,8 @@ import com.thinkjava.chart10.Contents;
 import com.thinkjava.chart10.Destination;
 import com.thinkjava.chart10.Paral4;
 import com.thinkjava.chart2.StaticTest;
+import com.thinkjava.chart20.PasswordUtils;
+import com.thinkjava.chart20.UseCaseTracker;
 import com.thinkjava.chart3.Letter;
 import com.thinkjava.chart3.Tank;
 import com.thinkjava.chart5.Cupboard;
@@ -396,7 +400,35 @@ public class MainStartClass {
 		/**
 		 * 第20章 注解(也被称为元数据)
 		 */
+		//		被注解的方法与其他方法没有区别。此例子中@Test可以与任何修饰共同作用于方法，注解的使用几乎与修饰符的使用一模一样。
 		
+		//20.2 编写注解处理器
+//		List<Integer> useCase=new ArrayList<Integer>();
+//		Collections.addAll(useCase, 47,48,49,50);
+//		UseCaseTracker.trackUseCase(useCase, PasswordUtils.class);
+		//20.2.1 注解元素 
+		//		包含：所有基本数据类型、String、Class、enum、Annotation、以上类型的数组
+		//20.2.2 默认值设置
+		//20.2.3 生成外部文件
+		//		有些framwork需要一些额外的信息才能与你的源代码协同工作，而这种情况最适合注解表现其价值了。
+		//		javabean生成数据库的例子(看625页的例子)
+		//20.2.4 注解不支持继承
+		
+		//20.3 使用apt处理注解
+		//20.5 基于注解的但愿测试（有时间再看）
+		
+		/**
+		 * 第21章  并发
+		 */
+		//21.1 并发的多面性
+		//		在单处理器上运行的并发程序开销比该程序的所有部分都顺序执行的开销大，因为其中增加了所谓上下
+		//		文切换。
+		//		在单处理器系统中性能提高的常见示例是事件驱动的编程。
+		//21.2 基本的线程机制
+		//		1、定义任务。线程可以驱动任务，描述任务可有Runnable接口来提供。但Runnable接口的run方法并无特殊之处，
+		//					不会产生线程能力，要实现线程行为，必须显示将一个任务附着到线程上。
+		//		2、Thread类 
+						
 	}
 	
 }
