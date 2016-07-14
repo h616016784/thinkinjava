@@ -18,7 +18,7 @@ import com.thinkjava.chart10.Contents;
 import com.thinkjava.chart10.Destination;
 import com.thinkjava.chart10.Paral4;
 import com.thinkjava.chart2.StaticTest;
-import com.thinkjava.chart21.LiftOff;
+//import com.thinkjava.chart21.LiftOff;
 //import com.thinkjava.chart20.PasswordUtils;
 //import com.thinkjava.chart20.UseCaseTracker;
 import com.thinkjava.chart3.Letter;
@@ -447,6 +447,29 @@ public class MainStartClass {
 		//		6、优先级
 		//		7、让步
 		//		8、后台线程
+		//		9、编码的变体
+		//		11、加入一个线程
+		//		14、捕获异常
+		//				由于线程的本质特性，不能捕获从线程中逃逸出的异常。一旦异常逃出任务的run（）方法，它就传播到控制台上，
+		//				除非采取特殊的步骤捕获异常。
+		//				要解决这个问题，我们要修改Executor产生线程的方式。为每个Thread配置一个异常处理器，Thread.UncaughtExeceptionHandler.uncaughtException()
+		//				会在线程因未捕获的异常而临近死亡时被调用。
+		//21.3	共享受限资源
+		//		加锁Lock和synchronized的区别？？？
+		//21.3.3 原子性与易变性(概念要理解，有时间)
+		//21.4 终结任务  
+		
+		//21.4.2 线程状态
+		//			1、新建（new）：当线程被创建时，它会短暂的处于这个状态。此时它已经分配了必要的系统资源，并执行了初始化。此刻线程已经
+		//				有资格获得CPU时间了，之后调度器将把这个线程转变为可运行状态或阻塞状态。
+		//			2、就绪（Runnable）：在任意深刻线程可运行也可不运行。只要调度器分配线程时间片段，它就可运行，不同于阻塞和死亡。
+		//			3、阻塞（Blocked）:线程能够运行，但某个条件阻止它运行。当线程处于阻塞时，调度器不会分配给线程CPU时间。直到重新进入就绪状态。
+		//			4、死亡（Dead）：线程终止或者不可调度，不会得到CPU时间，通常是run()方法返回或者线程被强制中断。
+		//21.4.3 中断（内容有时间好好的看看例子）
+		//			当打断正在阻塞的任务时，可能需要清理资源。
+		//21.5 线程之间的协作
+		//21.9 性能调优（要仔细的学习）
+		
 	}
 	
 }
